@@ -1,26 +1,102 @@
-import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 import './App.css';
+import MenuIcon from '@mui/icons-material/Menu';
+import Home from './screens/Home';
+import {AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography} from '@mui/material';
+
+
+const drawerWidth = 240;
+const navItems = ['Home', 'Portfolio', 'Contact'];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  }; 
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Typography variant="h6" sx={{ my: 2 }}>
+        A EM
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }}>
+              <ListItemText primary={item} />
+            </ListItemButton>
+          </ListItem>
+      ))}
+    </List>
+  </Box>
+);
+
+
+  const container = window !== undefined ? () => window.document.body : undefined;
+
+return (
+  <BrowserRouter>
+    <div style={{ width: '100vw', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <AppBar component="nav" color="primary">
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ color: '#fff', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          >
+            Alexandre Em
+          </Typography>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {navItems.map((item) => (
+              <Button key={item} sx={{ color: '#fff' }}>
+                {item}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Box component="nav">
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          {drawer}
+        </Drawer>
+      </Box>
+      <Toolbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
     </div>
-  );
+  </BrowserRouter>
+);
 }
 
 export default App;
+
