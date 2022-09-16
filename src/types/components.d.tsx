@@ -1,9 +1,11 @@
 type VignetteProps = {
   data: {
     title: string,
-    preview: string,
+    img: string,
     desc: string,
     demo: string,
+    type: string,
+    git?: string,
   }
 }
 

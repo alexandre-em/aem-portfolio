@@ -1,4 +1,5 @@
-import { WebAsset } from "@mui/icons-material";
+import { GitHub, WebAsset } from "@mui/icons-material";
+import {IconButton, Typography} from "@mui/material";
 import "./style.css";
 
 function Vignette({ data }: VignetteProps) {
@@ -8,20 +9,36 @@ function Vignette({ data }: VignetteProps) {
         <div className="vignette_project">
           <img
             className="vignette_preview"
-            style={{ backgroundImage: `url("${"projects/" + data.preview}")` }}
+            src={data.img}
+            alt={data.title}
+            loading="lazy"
           />
           <div className="vignette_overlay">
             <div className="vignette_item">
-              <h5>{data.title}</h5>
-              <p>{data.desc}</p>
+              <Typography variant="h4" sx={{ fontWeight: 600 }}>{data.title}</Typography>
+              <Typography variant="overline">
+                {data.desc}
+              </Typography>
             </div>
-            <a href={data.demo}>
-              <WebAsset />
-            </a>
+
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              {
+                data.type === 'link'
+                ? <a href={data.demo} style={{ color: '#fff' }}>
+                  <WebAsset />
+                </a>
+                : <IconButton onClick={() => console.log('test')} sx={{ color: '#fff', margin: 0, padding: 0 }}>
+                  <WebAsset />
+                </IconButton>
+              }
+              {data.git && <a href={data.git} style={{ color: '#fff' }}>
+                <GitHub />
+              </a>}
+            </div>
           </div>
         </div>
       </div>
-    // </Link>
+      // </Link>
   );
 }
 

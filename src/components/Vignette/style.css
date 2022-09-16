@@ -6,8 +6,6 @@
 }
 
 .vignette_project {
-  width: 250px;
-  height: 150px;
   position: relative;
   cursor: pointer;
 }

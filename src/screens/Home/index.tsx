@@ -47,7 +47,7 @@ export default function Home() {
             </a>
           </Button>
           <Button variant='contained' onClick={() => navigate('/projects')}>
-            My Portfolio
+            My Projects
           </Button>
         </div>
       </AboutText>
