@@ -1,0 +1,11 @@
+export enum STATUS {
+  TODO,
+  ONGOING,
+  DONE,
+}
+
+export enum PROJECT_CATEGORY {
+  SOFTWARE_ENGINEERING,
+    NETWORK_ENGINEERING,
+}
+

@@ -5,7 +5,7 @@ import {Description, Main, Text} from "./style";
 export default function ListItem({ data }: ListItemProps) {
   return (
     <Main>
-      <img src={data.logo} alt="" width="140" height={data.imageHeight} />
+      <img src={data.logo} loading="lazy" alt="" width="140" height={data.imageHeight} />
       <Text>
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
           <Typography variant="h5" sx={{ fontWeight: 500, color: blueGrey[700] }}>

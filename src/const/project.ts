@@ -1,4 +1,6 @@
-const itemData = [
+import {PROJECT_CATEGORY, STATUS} from "./enum";
+
+const itemData : Array<Projects> = [
   {
     img: require('../data/images/projects/my-library.gif'),
     title: 'MyLibrary',
@@ -6,6 +8,8 @@ const itemData = [
     demo: '',
     type: 'pdf',
     git: 'https://github.com/alexandre-em/CVIndexing',
+    status: STATUS.DONE,
+    category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
   },
   {
     img: require('../data/images/projects/cv-indexer.png'),
@@ -14,6 +18,8 @@ const itemData = [
     demo: '',
     type: 'markdown',
     git: 'https://github.com/alexandre-em/CVIndexing',
+    status: STATUS.DONE,
+    category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
   },
   {
     img: require('../data/images/projects/tuner.png'),
@@ -22,6 +28,8 @@ const itemData = [
     demo: 'https://alexandre-em.github.io/Em-tuner/',
     type: 'link',
     git: 'https://github.com/alexandre-em/Em-tuner',
+    status: STATUS.DONE,
+    category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
   },
   {
     img: require('../data/images/projects/cloud2.png'),
@@ -29,6 +37,8 @@ const itemData = [
     desc: 'Microsoft Virtual Machine deploying service',
     demo: '',
     type: 'pdf',
+    status: STATUS.DONE,
+    category: PROJECT_CATEGORY.NETWORK_ENGINEERING,
   },
   {
     img: require('../data/images/projects/fortigate.png'),
@@ -36,6 +46,8 @@ const itemData = [
     desc: 'A CA certificating an app protected with Fortigate',
     demo: '',
     type: 'pdf',
+    status: STATUS.DONE,
+    category: PROJECT_CATEGORY.NETWORK_ENGINEERING,
   },
   {
     img: require('../data/images/projects/minesweeper.png'),
@@ -44,6 +56,8 @@ const itemData = [
     demo: 'https://minesweeper-elm.netlify.app/',
     type: 'link',
     git: 'https://github.com/alexandre-em/minesweeper',
+    status: STATUS.DONE,
+    category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
   },
   {
     title: 'Nandarou',
@@ -52,6 +66,8 @@ const itemData = [
     demo: 'https://expo.io/@alexandre-em/projects/nandarou',
     type: 'link',
     git: 'https://github.com/alexandre-em/nandarou',
+    status: STATUS.DONE,
+    category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
   },
   {
     title: 'Birdy',
@@ -60,6 +76,8 @@ const itemData = [
     demo: '',
     type: 'markdown',
     git: 'https://github.com/alexandre-em/birdy',
+    status: STATUS.DONE,
+    category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
   },
   {
     img: require('../data/images/projects/exml.png'),
@@ -68,6 +86,8 @@ const itemData = [
     demo: '',
     type: 'pdf',
     git: 'https://github.com/alexandre-em/exml',
+    status: STATUS.DONE,
+    category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
   },
 ];
 

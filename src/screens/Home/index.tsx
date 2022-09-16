@@ -52,7 +52,7 @@ export default function Home() {
         </div>
       </AboutText>
       <AboutImage>
-        <img src={require('./images/clement-helardot-95YRwf6CNw8-unsplash.jpg')} width="50%" style={imageStyle} alt="" />
+        <img src={require('./images/clement-helardot-95YRwf6CNw8-unsplash.jpg')} loading="lazy" width="50%" style={imageStyle} alt="" />
       </AboutImage>
     </About>
 

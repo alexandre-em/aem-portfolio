@@ -2,11 +2,14 @@ import styled from '@emotion/styled';
 
 export const Main = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
 `;
 
 export const Gallery = styled.div`
-  flex: .75;
+  width: 75%;
   padding: 5px;
   background-color: #fff;
   border-radius: 10px;

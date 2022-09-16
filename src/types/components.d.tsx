@@ -1,13 +1,29 @@
-type VignetteProps = {
-  data: {
-    title: string,
-    img: string,
-    desc: string,
-    demo: string,
-    type: string,
-    git?: string,
-  }
+enum STATUS {
+  TODO,
+  ONGOING,
+  DONE,
 }
+
+enum PROJECT_CATEGORY {
+  SOFTWARE_ENGINEERING,
+    NETWORK_ENGINEERING,
+}
+
+type Projects = {
+  title: string,
+  img: string,
+  desc: string,
+  demo: string,
+  type: string,
+  git?: string,
+  status: STATUS,
+  category: PROJECT_CATEGORY,
+}
+
+type VignetteProps = {
+  data: Projects,
+}
+
 
 type ListItemProps = {
   data: {
