@@ -1,4 +1,4 @@
-export default ([
+const education = ([
   {
     logo: require('../data/images/Logo_Sorbonne_University.png'),
     company: "Sorbonne University",
@@ -26,4 +26,7 @@ export default ([
     description: "• Object oriented programming with Java \n • Functionnal programming with OCaml and Closure \n • SQL \n • algorithmic \n • C, Python \n • bash scripting \n • Computer system architecture + assembly language \n • Object oriented modelisation of softwares with UML",
     imageHeight: 60,
   },
-])
+]);
+
+export default education;
+

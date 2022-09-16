@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -11,11 +11,15 @@ import Home from './screens/Home';
 import {AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography} from '@mui/material';
 
 
+import navigationTitles from './const/navigation';
+import Blog from './screens/Blog';
+import Projects from './screens/Projects';
+
 const drawerWidth = 240;
-const navItems = ['Home', 'Portfolio', 'Contact'];
 
 function App() {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -24,14 +28,14 @@ function App() {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        A EM
+        A. EM
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+        {navigationTitles.map((item) => (
+          <ListItem key={item.name} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => navigate(item.link)}>
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
       ))}
@@ -43,7 +47,6 @@ function App() {
   const container = window !== undefined ? () => window.document.body : undefined;
 
 return (
-  <BrowserRouter>
     <div style={{ width: '100vw', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <AppBar component="nav" color="primary">
         <Toolbar>
@@ -64,9 +67,9 @@ return (
             Alexandre Em
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
+            {navigationTitles.map((item) => (
+              <Button key={item.name} sx={{ color: '#fff' }} onClick={() => navigate(item.link)}>
+                {item.name}
               </Button>
             ))}
           </Box>
@@ -92,9 +95,10 @@ return (
       <Toolbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/blog' element={<Blog />} />
       </Routes>
     </div>
-  </BrowserRouter>
 );
 }
 

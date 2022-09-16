@@ -1,4 +1,4 @@
-export default ([
+const experiences = ([
   {
     logo: require('../data/images/Logo_MonkAI.png'),
     company: "Monk AI",
@@ -10,3 +10,6 @@ export default ([
     imageHeight: 35,
   },
 ]);
+
+export default experiences;
+

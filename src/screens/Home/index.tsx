@@ -1,7 +1,7 @@
-import {Button, Chip, Divider, IconButton, Typography} from '@mui/material';
+import {useNavigate} from 'react-router-dom';
+import {Button, Chip, Divider, Typography} from '@mui/material';
 import {blueGrey} from '@mui/material/colors';
 import { About, AboutImage, AboutTags, AboutText, Education, Experience, Main } from './style';
-import { GitHub, LinkedIn, Email } from '@mui/icons-material';
 
 import experiences from '../../const/experience';
 import educations from '../../const/education';
@@ -18,6 +18,7 @@ const resumeLink = `https://drive.google.com/file/d/1ElpNXRis_YrBbjYI8KfjXMBwSpw
 
 export default function Home() {
   const skills = ['ReactJs', 'React Native', 'NodeJs', 'Java Spring'];
+  const navigate = useNavigate();
 
   return (
     <Main>
@@ -45,13 +46,13 @@ export default function Home() {
               My Resume
             </a>
           </Button>
-          <Button variant='contained'>
+          <Button variant='contained' onClick={() => navigate('/projects')}>
             My Portfolio
           </Button>
         </div>
       </AboutText>
       <AboutImage>
-        <img src={require('./images/clement-helardot-95YRwf6CNw8-unsplash.jpg')} width="50%" style={imageStyle} />
+        <img src={require('./images/clement-helardot-95YRwf6CNw8-unsplash.jpg')} width="50%" style={imageStyle} alt="" />
       </AboutImage>
     </About>
 
@@ -59,34 +60,28 @@ export default function Home() {
       <Typography variant="h4" style={{ fontWeight: '500' }} color={blueGrey[800]}>
         Experience
       </Typography>
-      {experiences.map((exp, i) => (
-        <div>
+    {experiences.map((exp, i) => (
+      <div key={`experience-${i}-${exp.company}-${exp.year}`}>
         <ListItem data={exp} />
 
-          {i < experiences.length - 1 && <Divider />}
-        </div>
-      ))}
-    </Experience>
+        {i < experiences.length - 1 && <Divider />}
+      </div>
+    ))}
+  </Experience>
 
-    <Education>
-      <Typography variant="h4" style={{ fontWeight: '500' }} color={blueGrey[800]}>
-        Education
-      </Typography>
-      {educations.map((education, i) => (
-        <div>
-          <ListItem data={education} />
-          {i < educations.length - 1 && <Divider />}
-        </div>
-      ))}
-    </Education>
-    <Footer />
-  </Main>
+  <Education>
+    <Typography variant="h4" style={{ fontWeight: '500' }} color={blueGrey[800]}>
+      Education
+    </Typography>
+    {educations.map((education, i) => (
+      <div key={`experience-${i}-${education.company}-${education.year}`}>
+        <ListItem data={education} />
+        {i < educations.length - 1 && <Divider />}
+      </div>
+    ))}
+  </Education>
+  <Footer />
+</Main>
 );
 }
-
-
-
-
-
-
 
