@@ -14,6 +14,7 @@ import {AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListIt
 import navigationTitles from './const/navigation';
 import Blog from './screens/Blog';
 import Projects from './screens/Projects';
+import Project from './screens/Project';
 
 const drawerWidth = 240;
 
@@ -94,7 +95,7 @@ return (
       </Box>
       <Toolbar />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Project />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/blog' element={<Blog />} />
       </Routes>

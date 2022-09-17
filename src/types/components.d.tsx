@@ -10,14 +10,18 @@ enum PROJECT_CATEGORY {
 }
 
 type Projects = {
+  id: string,
   title: string,
+  date: string,
   img: string,
   desc: string,
   demo: string,
+  report: any,
   type: string,
   git?: string,
   status: STATUS,
   category: PROJECT_CATEGORY,
+  skills: Array<string>,
 }
 
 type VignetteProps = {

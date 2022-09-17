@@ -3,13 +3,16 @@ import {CircularProgress, IconButton, ImageList, ImageListItem, ImageListItemBar
 import {STATUS} from "../../const/enum";
 import {Gallery, Main} from "./style";
 
-export default function ProjectsGallery({ projects = [], title }: { projects : Array<Projects>, title: string }) {
+export default function ProjectsGallery({ projects = [], title, Icon }: { projects : Array<Projects>, title: string, Icon: any }) {
   return (
     <Main>
-      <Typography variant="h5" fontWeight={500} color="primary">
-        {title}
-      </Typography>
       <Gallery>
+        <div style={{ marginTop: 5, display: 'flex', alignItems: 'center' }}>
+          <Icon color="primary" sx={{ marginX: 1.5, fontSize: 25 }} />
+          <Typography variant="h5" fontWeight={700} color="primary">
+            {title}
+          </Typography>
+        </div>
         <ImageList cols={3} gap={8}>
           {projects.map((item: Projects) => (
             <ImageListItem key={item.img}>

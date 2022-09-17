@@ -1,4 +1,5 @@
-import {Typography} from "@mui/material";
+import {Cloud, Terminal} from "@mui/icons-material";
+import {CircularProgress, Typography} from "@mui/material";
 import {blueGrey} from "@mui/material/colors";
 import Footer from "../../components/Footer";
 import ProjectsGallery from "../../components/ProjectsGallery";
@@ -17,9 +18,9 @@ export default function Projects() {
         <Typography variant="h4" style={{ fontWeight: '700', marginBottom: 25 }} color={blueGrey[800]}>
           My Projects
         </Typography>
-    {ongoing.length > 0 && <ProjectsGallery projects={ongoing} title="Ongoing projects" />}
-    {software.length > 0 && <ProjectsGallery projects={software} title="Software engineering projects" />}
-    {network.length > 0 && <ProjectsGallery projects={network} title="Computer networking engineering projects" />}
+    {ongoing.length > 0 && <ProjectsGallery Icon={CircularProgress} projects={ongoing} title="Ongoing projects" />}
+    {software.length > 0 && <ProjectsGallery projects={software} Icon={Terminal} title="Software engineering projects" />}
+    {network.length > 0 && <ProjectsGallery projects={network} Icon={Cloud} title="Computer networking engineering projects" />}
   </div>
   <Footer />
 </div>
