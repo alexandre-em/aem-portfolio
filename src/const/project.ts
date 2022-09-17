@@ -60,16 +60,6 @@ const itemData : Array<Projects> = [
     category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
   },
   {
-    title: 'Nandarou',
-    img: require('../data/images/projects/kanjiapp.png'),
-    desc: 'A mobile app to learn Kanji',
-    demo: 'https://expo.io/@alexandre-em/projects/nandarou',
-    type: 'link',
-    git: 'https://github.com/alexandre-em/nandarou',
-    status: STATUS.DONE,
-    category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
-  },
-  {
     title: 'Birdy',
     img: require('../data/images/projects/birdy.jpg'),
     desc: 'A twitter clone',

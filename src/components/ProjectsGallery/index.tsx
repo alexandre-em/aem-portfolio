@@ -1,5 +1,6 @@
 import {Notes} from "@mui/icons-material";
-import {IconButton, ImageList, ImageListItem, ImageListItemBar, Typography} from "@mui/material";
+import {CircularProgress, IconButton, ImageList, ImageListItem, ImageListItemBar, Typography} from "@mui/material";
+import {STATUS} from "../../const/enum";
 import {Gallery, Main} from "./style";
 
 export default function ProjectsGallery({ projects = [], title }: { projects : Array<Projects>, title: string }) {
@@ -25,7 +26,7 @@ export default function ProjectsGallery({ projects = [], title }: { projects : A
                     sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                     aria-label={`info about ${item.title}`}
                   >
-                    <Notes />
+                    {item.status === STATUS.DONE ? <Notes /> : <CircularProgress sx={{ color: '#9d9d9d' }} />}
                   </IconButton>
                 }
               />
