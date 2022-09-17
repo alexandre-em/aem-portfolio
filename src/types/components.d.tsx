@@ -9,6 +9,8 @@ enum PROJECT_CATEGORY {
     NETWORK_ENGINEERING,
 }
 
+declare module "*.pdf";
+
 type Projects = {
   id: string,
   title: string,

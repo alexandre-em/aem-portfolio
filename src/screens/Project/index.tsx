@@ -10,7 +10,7 @@ import Footer from "../../components/Footer";
 import projects from "../../const/project";
 import PdfReader from "../../components/PdfReader";
 
-const id = 'birdy';
+const id = 'mylibrary';
 
 export default function Project() {
   const divRef = useRef<HTMLDivElement>(null);
@@ -34,7 +34,7 @@ export default function Project() {
   return (
     <div>
       <Main>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="h4" fontWeight="700" sx={{ color: blueGrey[700] }}>
             {project.title}
           </Typography>
@@ -70,7 +70,7 @@ export default function Project() {
         <div ref={divRef} style={{ width: '80%', backgroundColor: '#fff', padding: 10, borderRadius: 10, marginTop: 15, boxShadow: 'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px', }}>
           {project.type === 'markdown'
             ? <MarkdownReader file={project.report} loading={{ isLoading, setIsLoading }} maxWidth={maxWidth} />
-            : <PdfReader />
+            : <PdfReader file={project.report} maxWidth={maxWidth} />
         }
         </div>
       </Content>

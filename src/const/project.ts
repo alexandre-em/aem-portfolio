@@ -1,4 +1,5 @@
 import {PROJECT_CATEGORY, STATUS} from "./enum";
+import mylibraryPdf from '../data/projects/DAAR_PROJECT_4.pdf';
 
 const itemData : Array<Projects> = [
   {
@@ -9,7 +10,7 @@ const itemData : Array<Projects> = [
     desc: 'Indexing Books to allow searching',
     demo: '',
     type: 'pdf',
-    report: null,
+    report: mylibraryPdf,
     git: 'https://github.com/alexandre-em/CVIndexing',
     status: STATUS.DONE,
     category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
