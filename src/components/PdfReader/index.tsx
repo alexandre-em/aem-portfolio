@@ -22,7 +22,7 @@ export default function PdfReader({ file, page = 0, maxWidth = .75 * window.inne
     }
 
     return content;
-  }, [numPages, maxWidth]);
+  }, [page, numPages, maxWidth]);
 
   return (
     <Document
