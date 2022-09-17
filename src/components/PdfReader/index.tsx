@@ -4,9 +4,10 @@ import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
 type PdfReaderProps = {
   file: any,
   maxWidth: number | undefined,
+  page: number | undefined,
 }
 
-export default function PdfReader({ file, maxWidth = .75 * window.innerWidth }: PdfReaderProps) {
+export default function PdfReader({ file, page = 0, maxWidth = .75 * window.innerWidth }: PdfReaderProps) {
   const [numPages, setNumPages] = useState(null);
 
   const onDocumentLoadSuccess = useCallback((numPages: any) => setNumPages(numPages), []);
@@ -15,7 +16,7 @@ export default function PdfReader({ file, maxWidth = .75 * window.innerWidth }: 
     const content = [];
 
     if (numPages) {
-      for (let i = 1; i <= 17; i++) {
+      for (let i = 1; i <= page; i++) {
         content.push(<Page width={maxWidth} key={`page_${i}`} pageNumber={i} />)
       }
     }

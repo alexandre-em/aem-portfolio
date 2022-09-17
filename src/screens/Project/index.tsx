@@ -9,10 +9,10 @@ import useResize from "../../hooks/useResize";
 import Footer from "../../components/Footer";
 import projects from "../../const/project";
 import PdfReader from "../../components/PdfReader";
-
-const id = 'mylibrary';
+import {useParams} from "react-router-dom";
 
 export default function Project() {
+  const { id } = useParams();
   const divRef = useRef<HTMLDivElement>(null);
   const maxWidth = useResize(divRef);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -67,10 +67,10 @@ export default function Project() {
         )}
       </Tags>
       <Content>
-        <div ref={divRef} style={{ width: '80%', backgroundColor: '#fff', padding: 10, borderRadius: 10, marginTop: 15, boxShadow: 'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px', }}>
+        <div ref={divRef} style={{ width: '80%', backgroundColor: '#fff', padding: 10, borderRadius: 10, marginTop: 15, boxShadow: 'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px', overflow: 'auto' }}>
           {project.type === 'markdown'
             ? <MarkdownReader file={project.report} loading={{ isLoading, setIsLoading }} maxWidth={maxWidth} />
-            : <PdfReader file={project.report} maxWidth={maxWidth} />
+            : <PdfReader file={project.report} page={project.page} maxWidth={maxWidth} />
         }
         </div>
       </Content>

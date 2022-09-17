@@ -10,6 +10,7 @@ enum PROJECT_CATEGORY {
 }
 
 declare module "*.pdf";
+declare module '@mapbox/rehype-prism';
 
 type Projects = {
   id: string,
@@ -19,6 +20,7 @@ type Projects = {
   desc: string,
   demo: string,
   report: any,
+  page?: number,
   type: string,
   git?: string,
   status: STATUS,

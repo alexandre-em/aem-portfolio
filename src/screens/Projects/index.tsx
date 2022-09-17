@@ -9,8 +9,8 @@ import projects from '../../const/project';
 
 export default function Projects() {
   const ongoing = projects.filter(({ status }) => status === STATUS.ONGOING);
-  const software = projects.filter(({ category }) => category === PROJECT_CATEGORY.SOFTWARE_ENGINEERING);
-  const network = projects.filter(({ category }) => category === PROJECT_CATEGORY.NETWORK_ENGINEERING);
+  const software = projects.filter(({ category, status }) => category === PROJECT_CATEGORY.SOFTWARE_ENGINEERING && status === STATUS.DONE);
+  const network = projects.filter(({ category, status }) => category === PROJECT_CATEGORY.NETWORK_ENGINEERING && status === STATUS.DONE);
 
   return (
     <div>

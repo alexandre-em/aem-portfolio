@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import remarkSlug from 'remark-slug';
 import remarkToc from 'remark-toc';
 import remarkGfm from 'remark-gfm';
-import rehypeHighlight from 'rehype-highlight';
+import rehypeHighlight from '@mapbox/rehype-prism';
 import ReactMarkdown from "react-markdown";
 import {blueGrey} from '@mui/material/colors';
 

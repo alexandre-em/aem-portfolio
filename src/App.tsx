@@ -95,8 +95,9 @@ return (
       </Box>
       <Toolbar />
       <Routes>
-        <Route path='/' element={<Project />} />
+        <Route path='/' element={<Home />} />
         <Route path='/projects' element={<Projects />} />
+        <Route path='/project/:id' element={<Project />} />
         <Route path='/blog' element={<Blog />} />
       </Routes>
     </div>

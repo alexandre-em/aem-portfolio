@@ -1,7 +1,24 @@
 import {PROJECT_CATEGORY, STATUS} from "./enum";
 import mylibraryPdf from '../data/projects/DAAR_PROJECT_4.pdf';
+import fortigate from '../data/projects/SECRES_TP_FORTI.pdf';
+import exml from '../data/projects/Projet_ExceML_EM.pdf';
+
 
 const itemData : Array<Projects> = [
+  {
+    id: 'kanjiup',
+    img: require('../data/images/projects/kanjiup.png'),
+    title: 'KanjiUp',
+    date: 'May 2022 - Current',
+    desc: 'Flascard mobile application to practice kanji drawing',
+    demo: '',
+    type: 'markdown',
+    report: null,
+    git: 'https://github.com/alexandre-em/kanji-up',
+    status: STATUS.ONGOING,
+    category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
+    skills: ['NodeJs', 'TFJS', 'Python', 'MongoDB', 'React Native'],
+  },
   {
     id: 'mylibrary',
     img: require('../data/images/projects/my-library.gif'),
@@ -11,6 +28,7 @@ const itemData : Array<Projects> = [
     demo: '',
     type: 'pdf',
     report: mylibraryPdf,
+    page: 17,
     git: 'https://github.com/alexandre-em/CVIndexing',
     status: STATUS.DONE,
     category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
@@ -24,11 +42,11 @@ const itemData : Array<Projects> = [
     desc: 'Indexing CV to allow searching by keyword',
     demo: '',
     type: 'markdown',
-    report: null,
+    report: require('../data/projects/cvindexer.md'),
     git: 'https://github.com/alexandre-em/CVIndexing',
     status: STATUS.DONE,
     category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
-    skills: ['Java', 'Spring', 'ElasticSearch', 'ReactJs'],
+    skills: ['Java Spring', 'ElasticSearch', 'Logstash', 'Kibana', 'ReactJs', 'Docker', 'Docker-compose', 'NGINX'],
   },
   {
     id: 'emtuner',
@@ -36,9 +54,9 @@ const itemData : Array<Projects> = [
     title: 'Em Tuner',
     date: 'January 2022',
     desc: 'Em Tuner is a guitar tuner',
-    demo: 'https://alexandre-em.github.io/Em-tuner/',
+    demo: 'https://alexandre-em.fr/Em-tuner/',
     type: 'markdown',
-    report: null,
+    report: require('../data/projects/emtuner.md'),
     git: 'https://github.com/alexandre-em/Em-tuner',
     status: STATUS.DONE,
     category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
@@ -65,7 +83,8 @@ const itemData : Array<Projects> = [
     desc: 'A CA certificating an app protected with Fortigate',
     demo: '',
     type: 'pdf',
-    report: null,
+    report: fortigate,
+    page: 14,
     status: STATUS.DONE,
     category: PROJECT_CATEGORY.NETWORK_ENGINEERING,
     skills: ['Fortigate', 'Easy-rsa', 'Docker', 'GNS3'],
@@ -78,7 +97,7 @@ const itemData : Array<Projects> = [
     desc: 'Minesweeper clone coded with Elm',
     demo: 'https://minesweeper-elm.netlify.app/',
     type: 'markdown',
-    report: null,
+    report: require('../data/projects/minesweeper.md'),
     git: 'https://github.com/alexandre-em/minesweeper',
     status: STATUS.DONE,
     category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,
@@ -106,7 +125,8 @@ const itemData : Array<Projects> = [
     desc: 'Excel clone coded with Ocaml',
     demo: '',
     type: 'pdf',
-    report: null,
+    report: exml,
+    page: 8,
     git: 'https://github.com/alexandre-em/exml',
     status: STATUS.DONE,
     category: PROJECT_CATEGORY.SOFTWARE_ENGINEERING,

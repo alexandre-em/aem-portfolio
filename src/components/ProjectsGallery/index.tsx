@@ -1,9 +1,19 @@
+import {useCallback} from "react";
+import { useNavigate } from 'react-router-dom';
 import {Notes} from "@mui/icons-material";
 import {CircularProgress, IconButton, ImageList, ImageListItem, ImageListItemBar, Typography} from "@mui/material";
 import {STATUS} from "../../const/enum";
 import {Gallery, Main} from "./style";
 
 export default function ProjectsGallery({ projects = [], title, Icon }: { projects : Array<Projects>, title: string, Icon: any }) {
+  const navigate = useNavigate();
+
+  const handlePressProject = useCallback((selectedProject: Projects) => {
+    if (navigate && selectedProject.status === STATUS.DONE) {
+      navigate(`/project/${selectedProject.id}`) 
+    }
+  }, [navigate]);
+
   return (
     <Main>
       <Gallery>
@@ -15,7 +25,7 @@ export default function ProjectsGallery({ projects = [], title, Icon }: { projec
         </div>
         <ImageList cols={3} gap={8}>
           {projects.map((item: Projects) => (
-            <ImageListItem key={item.img}>
+            <ImageListItem key={item.img} sx={item.status === STATUS.DONE ? { cursor: 'pointer' } : {}} onClick={() => handlePressProject(item)}>
               <img
                 src={`${item.img}`}
                 alt={item.title}
@@ -26,6 +36,7 @@ export default function ProjectsGallery({ projects = [], title, Icon }: { projec
                 subtitle={item.desc}
                 actionIcon={
                   <IconButton
+                    onClick={() => handlePressProject(item)}
                     sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                     aria-label={`info about ${item.title}`}
                   >
