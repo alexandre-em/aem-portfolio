@@ -1,15 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.e200d2ad.css",
-    "main.js": "/static/js/main.95e99339.js",
+    "main.js": "/static/js/main.248c0c9b.js",
     "static/js/27.01605014.chunk.js": "/static/js/27.01605014.chunk.js",
+    "static/media/DAAR_PROJECT_4.pdf": "/static/media/DAAR_PROJECT_4.09ac3b42d382f3c91377.pdf",
     "static/media/my-library.gif": "/static/media/my-library.7e4667286cd7a7534ebb.gif",
     "static/media/clement-helardot-95YRwf6CNw8-unsplash.jpg": "/static/media/clement-helardot-95YRwf6CNw8-unsplash.b6c3931702238e97de51.jpg",
+    "static/media/SECRES_TP_FORTI.pdf": "/static/media/SECRES_TP_FORTI.94439aff7fd9e6da12ee.pdf",
+    "static/media/pdf.worker.js": "/static/media/pdf.worker.5a4781656f64092ca08b.js",
     "static/media/birdy.jpg": "/static/media/birdy.2951996324ca5c4bed36.jpg",
     "static/media/cv-indexer.png": "/static/media/cv-indexer.e71193313fd080c97637.png",
+    "static/media/Projet_ExceML_EM.pdf": "/static/media/Projet_ExceML_EM.74b1c6b14ccbd549fb6e.pdf",
     "static/media/cloud2.png": "/static/media/cloud2.5d6fdfc94b982dab509f.png",
     "static/media/exml.png": "/static/media/exml.60aa68efef0edc3ea5e2.png",
     "static/media/Logo_Sorbonne_University.png": "/static/media/Logo_Sorbonne_University.b88a433e61f87923ac46.png",
+    "static/media/kanjiup.png": "/static/media/kanjiup.bff064c76e7cc5161f7e.png",
     "static/media/roboto-all-500-normal.woff": "/static/media/roboto-all-500-normal.0ab669b7a0d19b178f57.woff",
     "static/media/roboto-all-700-normal.woff": "/static/media/roboto-all-700-normal.a457fde362a540fcadff.woff",
     "static/media/roboto-all-400-normal.woff": "/static/media/roboto-all-400-normal.c5d001fa922fa66a147f.woff",
@@ -38,10 +43,14 @@
     "static/media/roboto-greek-400-normal.woff2": "/static/media/roboto-greek-400-normal.c35e4c3958e209d17b31.woff2",
     "static/media/roboto-greek-500-normal.woff2": "/static/media/roboto-greek-500-normal.9ac81fefbe6c319ea40b.woff2",
     "static/media/roboto-greek-700-normal.woff2": "/static/media/roboto-greek-700-normal.50e795c1345353b0e996.woff2",
+    "static/media/cvindexer.md": "/static/media/cvindexer.b2ee323a6b10db8f408f.md",
     "static/media/roboto-vietnamese-500-normal.woff2": "/static/media/roboto-vietnamese-500-normal.d8642a3d1d4ef6179644.woff2",
     "static/media/roboto-vietnamese-400-normal.woff2": "/static/media/roboto-vietnamese-400-normal.3230f9b040f3c630e0c3.woff2",
     "static/media/roboto-vietnamese-700-normal.woff2": "/static/media/roboto-vietnamese-700-normal.3425a701027d0699e369.woff2",
     "static/media/roboto-vietnamese-300-normal.woff2": "/static/media/roboto-vietnamese-300-normal.32fc45a3d1e8ea11fabc.woff2",
+    "static/media/birdy.md": "/static/media/birdy.d141584659625a5a9c4d.md",
+    "static/media/emtuner.md": "/static/media/emtuner.308e719ca479615f83fc.md",
+    "static/media/minesweeper.md": "/static/media/minesweeper.a85abc872dca7d44252a.md",
     "static/media/roboto-greek-ext-500-normal.woff2": "/static/media/roboto-greek-ext-500-normal.6fb9cffb1d3e72bf9293.woff2",
     "static/media/roboto-greek-ext-400-normal.woff2": "/static/media/roboto-greek-ext-400-normal.169619821ea93019d1bb.woff2",
     "static/media/roboto-greek-ext-300-normal.woff2": "/static/media/roboto-greek-ext-300-normal.35b9d6be04b95f0f0530.woff2",
@@ -50,6 +59,6 @@
   },
   "entrypoints": [
     "static/css/main.e200d2ad.css",
-    "static/js/main.95e99339.js"
+    "static/js/main.248c0c9b.js"
   ]
 }
