@@ -12,9 +12,9 @@ import {AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListIt
 
 
 import navigationTitles from './const/navigation';
-import Blog from './screens/Blog';
 import Projects from './screens/Projects';
 import Project from './screens/Project';
+import Building from './screens/Building';
 
 const drawerWidth = 240;
 
@@ -98,7 +98,7 @@ return (
         <Route path='/' element={<Home />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/project/:id' element={<Project />} />
-        <Route path='/blog' element={<Blog />} />
+        <Route path='/blog' element={<Building />} />
       </Routes>
     </div>
 );
