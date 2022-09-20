@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e200d2ad.css",
-    "main.js": "/static/js/main.248c0c9b.js",
+    "main.js": "/static/js/main.d873b133.js",
     "static/js/27.01605014.chunk.js": "/static/js/27.01605014.chunk.js",
     "static/media/DAAR_PROJECT_4.pdf": "/static/media/DAAR_PROJECT_4.09ac3b42d382f3c91377.pdf",
     "static/media/my-library.gif": "/static/media/my-library.7e4667286cd7a7534ebb.gif",
@@ -22,6 +22,7 @@
     "static/media/fortigate.png": "/static/media/fortigate.949a13b727914e9b7107.png",
     "static/media/Logo-CFAINSTA.png": "/static/media/Logo-CFAINSTA.59a92092c573443017c8.png",
     "static/media/tuner.png": "/static/media/tuner.4311fd7eb476a6d1e9b6.png",
+    "static/media/undraw_under_construction_-46-pa.svg": "/static/media/undraw_under_construction_-46-pa.0a90840b06bcffd655e87cc0cd7763ab.svg",
     "static/media/minesweeper.png": "/static/media/minesweeper.97520631655a51eaaf16.png",
     "static/media/roboto-latin-500-normal.woff2": "/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
@@ -59,6 +60,6 @@
   },
   "entrypoints": [
     "static/css/main.e200d2ad.css",
-    "static/js/main.248c0c9b.js"
+    "static/js/main.d873b133.js"
   ]
 }
