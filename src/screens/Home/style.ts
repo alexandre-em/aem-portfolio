@@ -1,8 +1,9 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const Main = styled.div`
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -19,7 +20,7 @@ export const About = styled.div`
 
 export const AboutText = styled.div`
   display: flex;
-  flex: .5;
+  flex: 0.5;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -29,7 +30,7 @@ export const AboutText = styled.div`
 `;
 
 export const AboutImage = styled.div`
-  flex: .5;
+  flex: 0.5;
   @media (max-width: 1050px) {
     display: none;
   }
@@ -42,7 +43,7 @@ export const AboutTags = styled.div`
 export const Experience = styled.div`
   background-color: #f7f7f7;
   padding: 25px;
-  flex: .5;
+  flex: 0.5;
 `;
 
 export const Education = styled.div`
@@ -50,4 +51,3 @@ export const Education = styled.div`
   flex: 5;
   background-color: #ededed;
 `;
-
